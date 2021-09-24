@@ -1,0 +1,40 @@
+<!-- <div  class="details" >
+  <div *ngIf="hero" class="hero-details">
+
+    <h2>{{hero.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div>
+      <label for="hero-name">Hero name: </label>
+      <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+    </div>
+
+    
+    <button (click)="save()">save</button>
+    <button (click)="goBack()">Go back</button>
+  
+  </div>
+</div> -->
+<h2>Detail Heroes</h2>
+<table  *ngIf="hero" class="table table-hover">
+  
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ID</th>
+      <th scope="col">Heroes</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td >{{hero.id}}</td>
+      <td><input id="hero-name" [(ngModel)]="hero.name" placeholder="name"></td>
+      <td>
+        <button class="btn btn-primary" (click)="save()">Save</button>
+        <button class="btn btn-danger"  (click)="goBack()">Go back</button>
+      </td>
+    </tr>
+   
+</table>
+  

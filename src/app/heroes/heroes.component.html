@@ -1,0 +1,62 @@
+
+<!--    
+   <ul class="heroes">
+     <li *ngFor="let hero of heroes">
+          <a routerLink="/detail/{{hero.id}}">
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
+          </a>
+          <button class="delete" title="delete hero"
+          (click)="delete(hero)">x</button>
+     </li>
+    
+   </ul>
+
+  <div>
+    <label for="new-hero">Hero name: </label>
+    <input id="new-hero" #heroName />
+  
+    
+    <button class="add-button" (click)="add(heroName.value); heroName.value=''">
+      Add hero
+    </button>
+   
+  </div> -->
+  
+  <h2>List of Heroes</h2>
+  <div id="add-hero">
+    <input id="new-hero" #heroName />
+    <button class="btn btn-success" id="btn-add" (click)="add(heroName.value); heroName.value=''">
+      Add hero
+    </button> 
+  </div>
+  
+  <table  id="table" class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Hero Name</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hero of heroes">
+        <th scope="row">{{hero.id}}</th>
+          <td>
+            <a routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
+          </td>
+        
+          <td>
+            
+            <button class="btn btn-danger" title="delete hero"
+            (click)="delete(hero)">Delete</button>
+            
+          </td>
+        
+       
+      </tr>
+     
+    </tbody>
+    
+  </table>
+  
+
